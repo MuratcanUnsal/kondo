@@ -133,15 +133,13 @@ if __name__ == '__main__':
 
 
     try:
-        # batarya leveli(fake) denemek icin raise Exception yorumdan al..
-        #raise Except
-        #dummyKondo = DummyKondo()
+
 	realKondo = RealKondo()
 	
     except Exception as e:
         e.message
     
-    #deneme()
+
     
     log.startLogging(sys.stdout)  # create a Twisted Web resource for our WebSocket server
     wsFactory = WebSocketServerFactory(u"ws://0.0.0.0:8080")
